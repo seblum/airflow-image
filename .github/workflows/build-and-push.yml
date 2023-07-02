@@ -1,7 +1,6 @@
-name: Docker CI MLflow
+name: Airflow CD
 
 env:
-  DIRECTORY: docker/airflow
   DOCKERREPO: seblum/airflow
   TAG: 2.2.5-python3.10-custom
 
@@ -33,7 +32,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          file: ./${{ env.DIRECTORY }}/Dockerfile
+          file: ./Dockerfile
           push: true
           tags: ${{ env.DOCKERREPO }}:${{ env.TAG }}
           #context: .
