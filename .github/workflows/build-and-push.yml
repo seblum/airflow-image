@@ -2,7 +2,7 @@ name: Airflow CD
 
 env:
   DOCKERREPO: seblum/airflow
-  TAG: latest-python3.11-custom
+  TAG: 2.6.3-python3.11-custom
 
 on:
   push:
